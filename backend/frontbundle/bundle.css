@@ -1,0 +1,186 @@
+* {
+  outline: none; }
+
+button {
+  background: none;
+  color: #000;
+  border: 3px solid #000;
+  padding: 5px 20px;
+  font-size: 20px; }
+  button:hover {
+    text-shadow: 0.5px 1px 1px #333;
+    cursor: pointer; }
+
+.form-modal, .div-createFolder-wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  min-height: 400px;
+  padding: 25px 0;
+  border: 2px solid #000;
+  border-radius: 5%;
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 22px;
+  text-align: center;
+  overflow: hidden; }
+  .form-modal .input-folder, .div-createFolder-wrapper .input-folder {
+    width: 70%;
+    height: 30px;
+    font-size: 22px; }
+    .form-modal .input-folder::placeholder, .div-createFolder-wrapper .input-folder::placeholder {
+      color: #000; }
+  .form-modal span, .div-createFolder-wrapper span {
+    display: block;
+    margin: 15px 0;
+    font-weight: bold; }
+  .form-modal label, .div-createFolder-wrapper label {
+    width: 70%;
+    background: none;
+    color: #000;
+    border: 3px solid #000;
+    padding: 5px 20px;
+    font-size: 20px; }
+    .form-modal label:hover, .div-createFolder-wrapper label:hover {
+      text-shadow: 0.5px 1px 1px #333;
+      cursor: pointer; }
+  .form-modal button, .div-createFolder-wrapper button {
+    width: 70%; }
+  .form-modal h3, .div-createFolder-wrapper h3 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    margin-bottom: 0;
+    padding: 5px 0;
+    border: 3px dashed #000;
+    box-sizing: border-box; }
+
+.btn-send, .btn-back {
+  margin-top: 20px; }
+
+.btn-upload {
+  margin-right: 20px; }
+
+.btn-exit {
+  position: relative;
+  top: -117px;
+  margin-left: 20px; }
+
+.btn-delete {
+  height: 40px;
+  padding: 10px 15px;
+  position: absolute;
+  right: 10px;
+  top: 1px; }
+
+input[type="text"] {
+  position: relative;
+  top: 30%;
+  transform: translateY(-30%);
+  width: 70%;
+  height: 30px;
+  border: 3px solid #000;
+  padding-left: 10px; }
+  input[type="text"]::placeholder {
+    font-size: 22px;
+    color: #000; }
+
+.hide {
+  position: absolute;
+  overflow: hidden;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0; }
+
+.dropZone {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  box-sizing: border-box; }
+  .dropZone:hover {
+    cursor: default; }
+
+.active {
+  display: block;
+  background: rgba(204, 204, 204, 0.9); }
+
+.dropZoneEnter {
+  display: block;
+  background: rgba(255, 255, 255, 0.9); }
+
+.dropZoneText-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  background: transparent;
+  font-weight: bold; }
+
+.div-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 5; }
+
+.div-createFolder {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; }
+  .div-createFolder button {
+    position: relative;
+    top: 35%;
+    transform: translateY(-35%); }
+
+.server-result {
+  position: relative;
+  width: 500px;
+  border: 4px solid paleturquoise; }
+  .server-result .folder, .server-result .li-file {
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    border-bottom: 3px solid #afeede;
+    color: lightblue;
+    font-size: 18px;
+    font-weight: bold; }
+    .server-result .folder h3, .server-result .li-file h3 {
+      padding: 1em;
+      margin: 0; }
+      .server-result .folder h3:hover, .server-result .li-file h3:hover {
+        cursor: pointer;
+        text-shadow: 0.5px 1px 1px #346e5b; }
+    .server-result .folder ul, .server-result .li-file ul {
+      padding-left: 0;
+      margin: 0; }
+    .server-result .folder .btn-delete-folder, .server-result .li-file .btn-delete-folder {
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+  .server-result .dragEnter {
+    border: 3px dotted #afeede; }
+  .server-result .li-file {
+    list-style: none;
+    padding-left: 10px;
+    background: rgba(127, 214, 255, 0.3);
+    box-sizing: border-box; }
+    .server-result .li-file a {
+      outline: none;
+      color: #fff;
+      font-weight: normal; }

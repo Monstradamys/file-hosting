@@ -1,0 +1,55 @@
+html
+    head
+        title Hosting
+        meta(charset='utf-8')
+        link(rel='stylesheet', href='./bundle.css')
+        script(src='./bundle.js')
+    body
+        div#root
+            h1 HOSTING
+            div.container#container
+                form(
+                    action='/api/files'
+                    method='POST'
+                    enctype='multipart/form-data'
+                    )
+                    input(
+                        type='file'
+                        placeholder='Insert name of your file'
+                        name='input-upload'
+                        id='input-upload'
+                        class='input-upload hide'
+                    )
+                    div.createFolder-wrapper
+                        input(
+                            type='text'
+                            placeholder='Name your folder!'
+                            name='input-folderName'
+                            id='input-folderName'
+                            class='input-folderName'
+                            maxlength='32'
+                        )
+                        button(
+                            type='button'
+                            class='btn-folder'
+                            id='btn-folder'
+                        ) Create your folder!
+                    div.chooseFile-wrapper
+                        label(
+                            for='input-upload'
+                            ) Choose a file
+                        input(
+                            type='text'
+                            placeholder='Insert name of your folder'
+                            name='input-chooseFolder'
+                            id='input-chooseFolder'
+                            class='input-chooseFolder'
+                        )
+                        button(
+                            id='btn-send'
+                            type='button'
+                        ) Send!
+                    div.dropZone#dropZone  Or drop here
+                div.server-feedback 
+                    h1 Here all your folders
+                    div.server-result#server-result
